@@ -5,7 +5,9 @@
 </head>
 <body>
     <h1>Output</h1>
-    <pre>{{ display|safe }}</pre> 
+    <pre>{{ alldata|safe }}</pre> 
+    <p>Number of lines inserted above the output: {{ num_lines_inserted }}</p>
+    <p>Number of duplicate lines removed: {{ num_duplicate_lines }}</p>    
     <!-- <p><a href="{{ file_path }}">Download Text File</a></p> -->
 </body>
 </html>

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Excel File Upload</title>
+    <title>Security File Upload</title>
 </head>
 <body>
-    <h1>Upload an Excel File</h1>
+    <h1>Upload an Security Excel File</h1>
     <form action="{% url 'upload_file' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="file" name="file" accept=".xlsx, .xls">
         <input type="submit" value="Upload">
     </form>
+    <br>
+    <p>Note: File must xls or xlsx format only</p>
+    <p>File uploaded are taken from DICT Cert PH Email</p>
 </body>
 </html>
