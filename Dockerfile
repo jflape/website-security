@@ -8,7 +8,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 # Set the working directory in the container
 WORKDIR /app
-RUN mdkir /output
+RUN mkdir /output
 RUN chmod -R 777 /output
 # Copy the requirements.txt file and install dependencies
 COPY socweb/requirements.txt /app/
