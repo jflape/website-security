@@ -1,6 +1,6 @@
 # Use an official Python runtime as the base image
-FROM python
-
+#FROM python
+FROM python:slim-bullseye
 # Set environment variables
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
