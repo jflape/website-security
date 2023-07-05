@@ -8,7 +8,7 @@ def upload_file(request):
     df = []
     if request.method == 'POST':
         file = request.FILES['file']
-        directory = './output/'
+        directory = '../output/'
 
         df.append(pd.read_excel(file, usecols=['IP Address']))
         df_data = pd.concat(df, axis=0)
@@ -60,7 +60,7 @@ def upload_file(request):
     return render(request, 'file_upload/upload.html')
 
 def output_data(request):
-        directory = './output/'
+        directory = '../output/'
         file_name = "output.txt"
     #   file_path = directory + file_name
         file_path = os.path.join(directory, file_name)

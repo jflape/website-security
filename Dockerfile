@@ -1,13 +1,15 @@
 # Use an official Python runtime as the base image
 #FROM python
 FROM python:slim-bullseye
+
 # Set environment variables
 ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
 
 # Set the working directory in the container
 WORKDIR /app
-
+RUN mdkir /output
+RUN chmod -R 777 /output
 # Copy the requirements.txt file and install dependencies
 COPY socweb/requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
