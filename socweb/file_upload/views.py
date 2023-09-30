@@ -60,7 +60,7 @@ def upload_file(request):
     return render(request, 'file_upload/upload.html')
 
 def output_data(request):
-        directory = './output/'
+        directory = '../output/'
         file_name = "output.txt"
     #   file_path = directory + file_name
         file_path = os.path.join(directory, file_name)
